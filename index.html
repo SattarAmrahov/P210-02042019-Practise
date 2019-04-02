@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 my-5">
+                <form name="userForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <input type="text" name="firstname" class="form-control" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="surname" class="form-control" placeholder="Enter surname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="birthday" class="form-control" placeholder="Enter birthday">
+                        <small class="form-text text-muted">Birthday format should be like that: 2015-03-11</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" class="form-control" placeholder="Enter email">
+                    </div>
+
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </form>
+
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <p>Delete user from list</p>
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="" id="deleteInput" placeholder="Enter ID">
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-warning" onclick="deletePerson();">Delete</button>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <p class="d-block">Sort by list</p>
+                        <button class="btn btn-outline-info" onclick="sortById()">ID</button>
+                        <button class="btn btn-outline-info" onclick="sortByName()">Name</button>
+                        <button class="btn btn-outline-info" onclick="sortBySurname()">Surname</button>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <ul id="person-list" class="list-group">
+                            <li class="list-group-item">Test</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
